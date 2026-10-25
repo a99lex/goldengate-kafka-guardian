@@ -6,3 +6,8 @@ node_modules/
 .dev.vars
 .wrangler/
 dist/
+public/
+__pycache__/
+collector/config.json
+*.pem
+*.key

@@ -1,0 +1,17 @@
+{
+  "collector_id": "default",
+  "guardian_url": "https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev",
+  "interval_seconds": 60,
+  "goldengate": [{
+    "name": "LAB",
+    "url": "https://gg-admin.example.internal:7810",
+    "username_env": "GG_USER",
+    "password_env": "GG_PASSWORD",
+    "processes": [{"id": "EXT1", "kind": "Extract"}, {"id": "REP1", "kind": "Replicat"}]
+  }],
+  "kafka": {
+    "client": {"bootstrap.servers": "broker.example.internal:9093", "security.protocol": "SASL_SSL", "sasl.mechanism": "SCRAM-SHA-512"},
+    "secret_env": {"sasl.username": "KAFKA_USER", "sasl.password": "KAFKA_PASSWORD"},
+    "groups": [{"id": "analytics", "topics": ["customer.events"]}]
+  }
+}

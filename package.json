@@ -1,0 +1,1 @@
+{"name":"goldengate-kafka-guardian","version":"0.2.0","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node --test tests/worker.test.mjs && python3 -m unittest discover -s tests -p 'test_*.py'","deploy":"npm run build && npx wrangler deploy"}}
